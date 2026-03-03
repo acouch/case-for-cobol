@@ -1,0 +1,9 @@
+services:
+  cobolweb:
+    build:
+      context: .
+    volumes:
+      - ./app:/cow
+    restart: always
+    ports:
+      - 8080:80

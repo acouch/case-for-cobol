@@ -1,0 +1,6 @@
+       IDENTIFICATION DIVISION.
+wtf    PROGRAM-ID. HELLOWORLD.
+      
+we     PROCEDURE DIVISION.
+are        DISPLAY "HELLO WORLD".
+the        STOP RUN.
