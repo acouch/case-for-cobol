@@ -87,7 +87,7 @@
                if include-trimmed(1:3) = '{{>'
                    move function trim(
                        include-trimmed(4:function length(
-                           function trim(include-trimmed)) - 4))
+                           function trim(include-trimmed)) - 5))
                        to include-filename
                    call 'renderinclude' using the-vars include-filename
                else

@@ -7,3 +7,12 @@ services:
     restart: always
     ports:
       - 8080:80
+
+  compiler:
+    image: cow-builder
+    volumes:
+      - ./app:/cow
+    working_dir: /cow
+    command: ["./downhill.sh"]
+    profiles:
+      - compile
