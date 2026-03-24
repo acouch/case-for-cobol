@@ -1,2 +1,4 @@
 # .dockerignore
 app/the.cow
+node_modules
+sass

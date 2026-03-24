@@ -1,0 +1,8 @@
+{
+  "name": "cobol-on-wheelchair",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@uswds/compile": "*",
+    "@uswds/uswds": "3.13.0"
+  }
+}

@@ -1,18 +1,108 @@
-<html>
-	<head>
-		<title>
-			Hello CoW.
-		</title>
-	</head>
-	<body>
-		<img src='images/logo.png' hspace=30 align=left>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Case for COBOL</title>
+  <link rel="stylesheet" href="/assets/uswds/css/styles.css">
+</head>
+<body>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
-		<h2>Cobol on Wheelchair !</h2>
-		<P>
-		<b>Examples</b>
-		<ul>
-			<li><a href="showname/Adrian">Hello World</a>
-			<li><a href="showsum/22/11">Calculator (values from path)</a>	
-		</ul>
-	</body>
-</html>		
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img class="usa-banner__header-flag" src="/assets/uswds/img/us_flag_small.png" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">NOT official website of the United States government</p>
+          <p class="usa-banner__header-action">You should know better</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-default" hidden>
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/assets/uswds/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p><strong>Official websites use .gov</strong><br>A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/assets/uswds/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p><strong>Secure .gov websites use HTTPS</strong><br>A <strong>lock</strong> or <strong>https://</strong> means you've safely connected to the .gov website.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text"><a href="/" title="COBOL on Wheelchair">Give COBOL a chance</a></em>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="usa-section">
+    <div class="grid-container">
+      <h1 class="font-heading-xl">COBOL is BACK</h1>
+      <p class="usa-intro">A micro web framework for COBOL. CGI-powered, Apache-served, and surprisingly functional.</p>
+      <div class="usa-card-group">
+        <div class="usa-card tablet:grid-col-6">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Hello World</h2>
+            </div>
+            <div class="usa-card__body">
+              <p>Greet a user by name from the URL path.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="/showname/Adrian" class="usa-button">Try it</a>
+            </div>
+          </div>
+        </div>
+        <div class="usa-card tablet:grid-col-6">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Calculator</h2>
+            </div>
+            <div class="usa-card__body">
+              <p>Add two numbers passed as path parameters.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="/showsum/22/11" class="usa-button">Try it</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="grid-container">
+      <p class="usa-footer__logo-heading">COBOL on Wheelchair &mdash; powered by GnuCOBOL &amp; Apache</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/uswds/js/uswds-init.min.js"></script>
+<script src="/assets/uswds/js/uswds.min.js"></script>
+</body>
+</html>

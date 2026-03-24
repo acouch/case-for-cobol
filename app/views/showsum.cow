@@ -1,14 +1,49 @@
-<html>
-	<head>
-		<title>
-			Sum example.
-		</title>
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="/assets/uswds/css/styles.css">
+</head>
+<body>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
-		<h2> 
-			{{number1}} + {{number2}} = {{number3}}		
-		</h2>	
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text"><a href="/" title="COBOL on Wheelchair">CoW</a></em>
+      </div>
+    </div>
+  </div>
+</header>
 
-	</body>
-</html>		
+<main id="main-content">
+  <section class="usa-section">
+    <div class="grid-container">
+      <h1 class="font-heading-xl">Calculator</h1>
+      <div class="usa-alert usa-alert--success" role="region" aria-label="Result">
+        <div class="usa-alert__body">
+          <p class="usa-alert__heading">{{number1}} + {{number2}} = {{number3}}</p>
+        </div>
+      </div>
+      <div class="margin-top-4">
+        <a href="/" class="usa-button usa-button--outline">Back to home</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="usa-footer usa-footer--slim">
+  <div class="usa-footer__primary-section">
+    <div class="grid-container">
+      <p class="usa-footer__logo-heading">COBOL on Wheelchair &mdash; powered by GnuCOBOL &amp; Apache</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/uswds/js/uswds-init.min.js"></script>
+<script src="/assets/uswds/js/uswds.min.js"></script>
+</body>
+</html>
