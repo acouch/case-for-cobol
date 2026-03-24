@@ -44,15 +44,7 @@
   </div>
 </section>
 
-<header class="usa-header usa-header--basic">
-  <div class="usa-nav-container">
-    <div class="usa-navbar">
-      <div class="usa-logo">
-        <em class="usa-logo__text"><a href="/" title="COBOL on Wheelchair">Give COBOL a chance</a></em>
-      </div>
-    </div>
-  </div>
-</header>
+{{>header.cow}}
 
 <main id="main-content">
   <section class="usa-section">

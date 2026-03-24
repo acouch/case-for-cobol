@@ -1,0 +1,21 @@
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text"><a href="/" title="COBOL on Wheelchair">CoW</a></em>
+      </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <button type="button" class="usa-nav__close"><img src="/assets/uswds/img/usa-icons/close.svg" role="img" alt="Close"></button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="/showname/Adrian" class="usa-nav__link">Hello World</a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="/showsum/22/11" class="usa-nav__link">Calculator</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
