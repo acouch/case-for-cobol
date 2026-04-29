@@ -31,6 +31,9 @@
 
        01 counter    PIC 9(4).
 
+       01  include-filename  pic x(255).
+       01  include-trimmed   pic x(255).
+
 
        linkage section.
 
@@ -80,8 +83,16 @@
 
                END-PERFORM
 
-               display function trim(templine)
-
+               move function trim(templine) to include-trimmed
+               if include-trimmed(1:3) = '{{>'
+                   move function trim(
+                       include-trimmed(4:function length(
+                           function trim(include-trimmed)) - 5))
+                       to include-filename
+                   call 'renderinclude' using the-vars include-filename
+               else
+                   display include-trimmed
+               end-if
 
                read readfile
            end-perform
@@ -148,4 +159,67 @@
            stop run
            .
        end program checkfilestatus.
+
+
+       identification division.
+       program-id. renderinclude.
+
+       environment division.
+       input-output section.
+       file-control.
+           select incfile
+               assign to incfile-name
+               file status is incfile-status
+               organization is line sequential.
+
+       data division.
+       file section.
+       fd  incfile.
+       01  incline pic x(1024).
+
+       working-storage section.
+       01  incfile-name    pic x(255).
+       01  incfile-status  pic x(2).
+       01  inctempline     pic x(1024).
+       01  incwhat         pic x(100).
+       01  incctr          pic 9(4).
+
+       linkage section.
+       01 the-vars.
+          03  COW-vars OCCURS 99 times.
+            05 COW-varname   pic x(99).
+            05 COW-varvalue  pic x(99).
+       01  inc-filename     pic x(255).
+
+       procedure division using the-vars inc-filename.
+           move function concatenate(
+               "views/", function trim(inc-filename))
+               to incfile-name
+
+           open input incfile
+           call 'checkfilestatus' using incfile-name incfile-status
+
+           read incfile
+           perform until incfile-status = '10'
+               move function trim(incline) to inctempline
+
+               perform varying incctr from 1 by 1 until incctr > 99
+                   move function concatenate(
+                       '{{' function trim(COW-varname(incctr)) '}}')
+                       to incwhat
+                   move function SUBSTITUTE(
+                       inctempline,
+                       function trim(incwhat),
+                       function trim(COW-varvalue(incctr)))
+                       to inctempline
+               end-perform
+
+               display function trim(inctempline)
+               read incfile
+           end-perform
+
+           close incfile
+           goback.
+       end program renderinclude.
+
        end program cowtemplate.

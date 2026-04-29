@@ -12,6 +12,7 @@ WORKDIR /cow
 RUN apt-get update && apt-get install -qy open-cobol apache2 libcob1
 COPY ./app /cow
 COPY --from=uswds-builder /build/app/assets /cow/assets
+ARG CACHE_BUST=1
 RUN ./downhill.sh
 
 # Stage 3: runtime
